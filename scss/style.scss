@@ -1,24 +1,84 @@
 @import 'normalize';
 @import 'variables';
 @import 'mixins';
-@import 'socials';
+// @import 'socials';
 
 * {
-  box-sizing: border-box;
+  	box-sizing: border-box;
 }
 
 html {
-  font-size: 10px;
+  	font-size: 10px;
 }
 body {
-  @include font($body-ff, 1.4rem, $body-color, $lh: 1.7);
-  padding: 50px 0;
-  background-color: $body-bg;
+	@include font($body-ff, 1.6rem, $body-color, $lh: 1.6);
+	background-color: $body-bg;
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 1170px;
-  padding: 15px;
+	margin: 0 auto;
+	max-width: 1170px;
+	padding: 15px;
 }
+
+// .col {
+// 	display: flex;
+// 	justify-content: space-between;
+// }
+
+// .col--1 {
+// 	max-width: 100%;
+// }
+
+// .col--1-2 {
+// 	max-width: 50%;
+// }
   
+.header {
+  	outline: 1px solid red;
+	min-height: 100vh;
+	background-image: url(../img/head-bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	&__main {
+		text-align: center;
+		padding-top: 30%;
+		outline: 1px solid red;
+	}
+}
+
+.slogan {
+
+	&__title {
+		@include font($fz: 4.8rem, $fc: $secondary-color, $fw: 700, $lh: .5);
+		margin: 25px 0;
+	}
+	&__subtitle {
+		@include font($fz: 2.2rem, $fc: $secondary-color, $lh: 1.2);
+		letter-spacing: .3em;
+	}
+}
+
+.search {
+	margin: 55px auto;
+	position: relative;
+	width: 650px;
+	height: 60px;
+	border: $border-width solid $secondary-color;
+
+	&__input {
+		border: none;
+		width: 100%;
+		height: 100%;
+	}
+}
+.btn {
+
+
+	&--form {
+		@include posA($left:nall);
+		right: 0;
+	}
+}
