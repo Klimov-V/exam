@@ -8,11 +8,17 @@
 }
 
 html {
-  	font-size: 10px;
+	  font-size: 10px;
+	  scroll-behavior: smooth;
 }
 body {
 	@include font($body-ff, 1.6rem, $body-color, $lh: 1.6);
 	background-color: $body-bg;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
 }
 
 .container {
@@ -37,6 +43,7 @@ body {
 .header {
   	outline: 1px solid red;
 	min-height: 100vh;
+	background-color: $primary-color;
 	background-image: url(../img/head-bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -45,7 +52,17 @@ body {
 	&__main {
 		text-align: center;
 		padding-top: 30%;
-		outline: 1px solid red;
+	}
+	&__scroll {
+		@include font($fz: 1.4rem, $fc: $secondary-color, $lh: 1.9);
+		letter-spacing: .2em;
+
+		&:after {
+			content: ">";
+			display: block;
+			transform: rotateZ(90deg);
+			line-height: 1;
+		}
 	}
 }
 
@@ -63,22 +80,32 @@ body {
 
 .search {
 	margin: 55px auto;
-	position: relative;
-	width: 650px;
-	height: 60px;
-	border: $border-width solid $secondary-color;
+	display: flex;
+	justify-content: center;
 
 	&__input {
 		border: none;
-		width: 100%;
-		height: 100%;
+		width: 500px;
+		height: 60px;
+		text-align: center;
+		letter-spacing: 0.2em;
+		font-size: 1.4rem;
 	}
 }
 .btn {
+	border: none;
+	color: $secondary-color;
+	text-transform: uppercase;
+	padding: 1.2em 2.5em;
+	max-height: 60px;
 
-
-	&--form {
-		@include posA($left:nall);
-		right: 0;
+	&__search {
+		border: $border-width solid $secondary-color;
+		background-color: $primary-color;
 	}
+}
+.navigation {
+	outline: 1px solid red;
+
+
 }
