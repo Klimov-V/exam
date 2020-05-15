@@ -1,5 +1,4 @@
-$social-size: 32px;
-$social-border: 2px;
+$social-size: 16px;
 
 .social {
     list-style: none;
@@ -14,18 +13,15 @@ $social-border: 2px;
 
     &__link {
         display: inline-block;
-        color: $light-gray;
+        color: $body-color;
         text-decoration: none;
         width: $social-size;
         height: $social-size;
-        line-height: calc(#{$social-size} - 2 * #{$social-border});
-        border: 2px solid $light-gray;
-        border-radius: 50%;
+        line-height: $social-size;
         
         @include tr;
         @include hover {
-            background-color: $light-gray;
-            color: $secondary-color;
+            color: $primary-color;
         }
     }
 }
