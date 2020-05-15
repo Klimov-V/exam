@@ -153,9 +153,16 @@ a {
 
 	&__title {
 		@include font($fz: 2rem, $ls: .075em);
+		margin: 0;
 	}
 
-	&__subtitle {}
+	&__subtitle {
+		text-transform: uppercase;
+		@include font($fz: 2rem);
+		margin: 35px 0;
+	}
 
-	&__text {}
+	&__text {
+		margin-bottom: 50px;
+	}
 }
