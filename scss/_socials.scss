@@ -3,25 +3,27 @@ $social-size: 16px;
 .social {
     list-style: none;
     padding: 0;
+    margin: 30px;
     text-align: center;
 
 
     &__item {
         display: inline-block;
-        margin: 5px;
+    }
+    &__item + &__item {
+        margin-left: 25px;
     }
 
     &__link {
         display: inline-block;
-        color: $body-color;
+        fill: $body-color;
         text-decoration: none;
         width: $social-size;
         height: $social-size;
-        line-height: $social-size;
         
         @include tr;
         @include hover {
-            color: $primary-color;
+            fill: $primary-color;
         }
     }
 }

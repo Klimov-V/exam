@@ -201,7 +201,7 @@ a {
 	&__name {
 		@include font($fz: 2rem, $fc: #fefefe);
 		text-transform: uppercase;
-		margin: 0 0 35px;
+		margin: 0 0 15px;
 	}
 
 	&__blockquote {
@@ -212,8 +212,23 @@ a {
 		&:before {
 			content: '"';
 			@include font($ff: $btn-ff, $fz: 3.6rem, $fc: $primary-color);
-			// font-size: 3.6rem;
-			// color: $primary-color;
+		}
+	}
+}
+
+.footer {
+	padding: 120px 0 50px;
+	text-align: center;
+
+	.slogan {
+		&__title {
+			font-size: 2.4rem;
+			letter-spacing: .14em;
+		}
+		
+		&__subtitle {
+			font-size: 1.6em;
+			letter-spacing: .1em;
 		}
 	}
 }

@@ -27,12 +27,12 @@
 .slogan {
 
 	&__title {
-		@include font($fz: 4.8rem, $fc: $secondary-color, $fw: 700, $ls: .1em);
-		margin: 25px 0;
+		@include font($ff: $title-ff, $fz: 4.8rem, $fc: $secondary-color, $fw: 700, $ls: .1em);
+		margin: 25px 0 15px;
 		text-transform: uppercase;
 	}
 	&__subtitle {
-		@include font($fz: 2.2rem, $fc: $secondary-color, $ls: .3em);
+		@include font($ff: $title-ff, $fz: 2.2rem, $fc: $secondary-color, $ls: .3em);
 	}
 }
 
