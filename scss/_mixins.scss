@@ -1,4 +1,4 @@
-@mixin font($ff: inherit, $fz: inherit, $fc: inherit, $fw: 400, $lh: 26px) {
+@mixin font($ff: inherit, $fz: inherit, $fc: inherit, $fw: 400, $lh: 26px, $ls: 0) {
     font-family: $ff;
     font-size: $fz;
     color: $fc;

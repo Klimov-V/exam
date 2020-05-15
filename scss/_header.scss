@@ -13,8 +13,7 @@
 		text-align: center;
 	}
 	&__scroll {
-		@include font($fz: 1.4rem, $fc: $secondary-color);
-		letter-spacing: .2em;
+		@include font($fz: 1.4rem, $fc: $secondary-color, $ls: .2em);
 
 		&:after {
 			content: ">";
@@ -28,14 +27,12 @@
 .slogan {
 
 	&__title {
-		@include font($fz: 4.8rem, $fc: $secondary-color, $fw: 700);
+		@include font($fz: 4.8rem, $fc: $secondary-color, $fw: 700, $ls: .1em);
 		margin: 25px 0;
-		letter-spacing: .1em;
 		text-transform: uppercase;
 	}
 	&__subtitle {
-		@include font($fz: 2.2rem, $fc: $secondary-color);
-		letter-spacing: .3em;
+		@include font($fz: 2.2rem, $fc: $secondary-color, $ls: .3em);
 	}
 }
 
