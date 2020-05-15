@@ -152,7 +152,7 @@ a {
 	padding: 50px 30px;
 
 	&__title {
-
+		@include font($fz: 2rem, $ls: .075em);
 	}
 
 	&__subtitle {}

@@ -4,6 +4,7 @@
     color: $fc;
     font-weight: $fw;
     line-height: $lh;
+    letter-spacing: $ls;
 }
 
 @mixin posA($top: 50%, $left: 50%, $delta_x: -50%, $delta_y: -50%) {
