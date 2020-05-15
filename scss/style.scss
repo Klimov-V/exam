@@ -102,11 +102,15 @@ a {
 .align-right {
 	float: right;
 
+	
 	&:before,
 	&:after {
-		clear: both;
+		content: "";
+		display: table;
+		clear: right;
 	}
 }
+
 
 .chooseUs {
 
@@ -141,4 +145,10 @@ a {
 }
 #like {
 	fill: #00a2ff;
+}
+
+.discription {
+	background-color: rgba($color: $body-bg, $alpha: .9);
+	margin-top: 120px;
+	padding: 50px 30px;
 }
