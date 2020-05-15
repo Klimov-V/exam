@@ -79,8 +79,17 @@ a {
 	}
 
 	&__title {
-		padding: 90px 0 70px;
+		padding: 0 0 70px;
 		@include font ($btn-ff, 3.6rem, $secondary-color);
+
+		&--custom-gap {
+			padding: 90px 0 70px;
+		}
+		&--center {
+			text-align: center;
+			position: relative;
+			z-index: 1;
+		}
 	}
 
 	&--mask {
@@ -164,5 +173,47 @@ a {
 
 	&__text {
 		margin-bottom: 50px;
+	}
+}
+
+.review {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	background-color: #333333;
+
+	&__img {
+		height: 100%;
+		width: 100%;
+
+		&--wraper {
+			min-width: 445px;
+			max-height: 280px;
+			overflow: hidden;
+		}
+	}
+	&__text {
+		padding: 15px 50px 15px 60px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	&__name {
+		@include font($fz: 2rem, $fc: #fefefe);
+		text-transform: uppercase;
+		margin: 0 0 35px;
+	}
+
+	&__blockquote {
+		margin: 0;
+		padding: 0;
+		@include font($fz: 1.6rem, $fc: $body-color);
+
+		&:before {
+			content: '"';
+			@include font($ff: $btn-ff, $fz: 3.6rem, $fc: $primary-color);
+			// font-size: 3.6rem;
+			// color: $primary-color;
+		}
 	}
 }
