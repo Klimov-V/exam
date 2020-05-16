@@ -27,12 +27,18 @@
 .slogan {
 
 	&__title {
-		@include font($ff: $title-ff, $fz: 4.8rem, $fc: $secondary-color, $fw: 700, $ls: .1em);
+		@include font($ff: $title-ff, $fz: 4rem, $fc: $secondary-color, $fw: 700, $ls: .1em);
 		margin: 25px 0 15px;
 		text-transform: uppercase;
+		@media screen and (min-width: 576px) {
+			font-size: 4.8rem;
+		}
 	}
 	&__subtitle {
-		@include font($ff: $title-ff, $fz: 2.2rem, $fc: $secondary-color, $ls: .3em);
+		@include font($ff: $title-ff, $fz: 1.8rem, $fc: $secondary-color, $ls: .3em);
+		@media screen and (min-width: 576px) {
+			font-size: 2.2rem;
+		}
 	}
 }
 
@@ -45,7 +51,7 @@
 		flex-direction: column;
 		align-items: center;
 	}
-	@media screen and (min-width: 992px) {
+	@media screen and (min-width: 760px) {
 		flex-direction: row;
 	}
 
@@ -54,14 +60,28 @@
 		height: 60px;
 		text-align: center;
 		letter-spacing: 0.2em;
-		font-size: 1.4rem;
+		// font-size: 1.4rem;
+		padding: 0 10px;
+
+		&::placeholder {
+			@media screen and (min-width: 320px) {
+				font-size: 1.2rem;
+			}
+			@media screen and (min-width: 765px) {
+				font-size: 1.4rem;
+			}
+		}
 
 		@media screen and (min-width: 320px) {
 			width: 280px;
+			font-size: 1.2rem;
 		}
 		@media screen and (min-width: 768px) {
 			width: 300px;
+			font-size: 1.4rem;
 		}
+
+
     }
     &__btn {
         border: $border-width solid $secondary-color;
@@ -75,7 +95,7 @@
 		@media screen and (min-width: 320px) {
 			margin-top: 20px;
 		}
-		@media screen and (min-width: 992px) {
+		@media screen and (min-width: 760px) {
 			margin-top: 0;
 		}
     }
@@ -99,17 +119,18 @@
 		padding: 0;
 		margin: 0;
 		width: 50%;
-		display: flex;
 		justify-content: space-between;
+		display: none;
+
+		@media screen and (min-width: 768px) {
+			display: flex;
+		}
 	}
 
 	&__link {
 		@include font($btn-ff, $fc: $secondary-color);
 		text-transform: uppercase;
-
-		@media screen and (min-width: 768px) {
-			font-size: 1.1rem;
-		}
+		font-size: 1.1rem;
 		@media screen and (min-width: 992px) {
 			font-size: 1.4rem;
 		}
