@@ -45,6 +45,8 @@
             border-bottom-color: $secondary-color;
         }
         @media screen and (min-width: 768px) {
+            border-top: none;
+            border-bottom: none;
             border-left: $border-width solid $primary-color;
             border-right: $border-width solid $primary-color;
             @include hover {
@@ -86,6 +88,6 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked ~ .menu__list {
     opacity: 1;
     @include tr;
-    right: 0;
+    right: -15px;
 }
 
