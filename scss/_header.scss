@@ -21,6 +21,9 @@
 			transform: rotateZ(90deg);
 			line-height: 1;
 		}
+		@include hover {
+			opacity: .7;
+		}
 	}
 }
 
@@ -98,6 +101,13 @@
 		@media screen and (min-width: 760px) {
 			margin-top: 0;
 		}
+
+		@include tr;
+		@include hover {
+			border-color: darken($color: $primary-color, $amount: 5);
+			border-left-color: $secondary-color;
+			background-color: darken($color: $primary-color, $amount: 5);
+		}
     }
 }
 
@@ -118,19 +128,30 @@
 		list-style: none;
 		padding: 0;
 		margin: 0;
-		width: 50%;
-		justify-content: space-between;
+		justify-content: end;
 		display: none;
 
 		@media screen and (min-width: 768px) {
 			display: flex;
 		}
+
+	}
+	&__item {
+		padding: 0 10px;
+		border-left: $border-width solid $primary-color;
+		border-right: $border-width solid $primary-color;
+		@include hover {
+			border-left-color: $secondary-color;
+			border-right-color: $secondary-color;
+		}
+		
 	}
 
 	&__link {
-		@include font($btn-ff, $fc: $secondary-color);
+		@include font($btn-ff, $fz: 1.1rem, $fc: $secondary-color, $lh: 80px);
 		text-transform: uppercase;
-		font-size: 1.1rem;
+		display: inline-block;
+		height: 80px;
 		@media screen and (min-width: 992px) {
 			font-size: 1.4rem;
 		}
