@@ -27,13 +27,24 @@
         </div>
         <nav class="navigation">
             <div class="container">
-                <a href="#"><h2 class="logo">Bhromaon</h2></a>
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a class="navigation__link" href="#">Who We Are</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="#">What We Do</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="#">Travel With Us</a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="#">Contact Us</a></li>
-                </ul>
+                <div class="navigation__inner">
+                    <a href="#">
+                        <h2 class="logo">Bhromaon</h2>
+                    </a>
+                    <label class="menu__toggler" for="burger">
+                        <svg width="30" height="30">
+                            <use xlink:href="#menu"/>
+                        </svg>
+                    </label>
+                    <input type="checkbox" id="burger">
+                    
+                    <ul class="menu__list">
+                        <li class="menu__item"><a class="menu__link" href="#">Who We Are</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">What We Do</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Travel With Us</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -239,6 +250,11 @@
 			c52.534,0,100.987-12.943,145.35-38.83c44.363-25.895,79.492-61.023,105.387-105.393c25.887-44.365,38.838-92.811,38.838-145.352
 			c0-52.54-12.951-100.985-38.838-145.355C514.422,99.87,479.287,64.741,434.924,38.847z"/>
 	
+        </symbol>
+        <symbol viewbox="0 0 512 512" id="menu">
+            <path d="m464.883 64.267h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z"/>
+            <path d="m464.883 208.867h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z"/>
+            <path d="m464.883 353.467h-417.766c-25.98 0-47.117 21.137-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.012-21.137-47.149-47.117-47.149z"/>
         </symbol>
 
     </svg>

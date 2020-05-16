@@ -1,5 +1,6 @@
 .header {
 	min-height: 100vh;
+	width: 100%;
 	background-color: $primary-color;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -26,13 +27,15 @@
 		}
 	}
 }
-
 .slogan {
 
 	&__title {
-		@include font($ff: $title-ff, $fz: 4rem, $fc: $secondary-color, $fw: 700, $ls: .1em);
+		@include font($ff: $title-ff, $fz: 3.6rem, $fc: $secondary-color, $fw: 700, $ls: .1em);
 		margin: 25px 0 15px;
 		text-transform: uppercase;
+		@media screen and (min-width: 320px) {
+			font-size: 4rem;
+		}
 		@media screen and (min-width: 576px) {
 			font-size: 4.8rem;
 		}
@@ -44,16 +47,13 @@
 		}
 	}
 }
-
 .search {
 	margin: 55px auto;
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 
-	@media screen and (min-width: 320px) {
-		flex-direction: column;
-		align-items: center;
-	}
 	@media screen and (min-width: 760px) {
 		flex-direction: row;
 	}
@@ -63,7 +63,6 @@
 		height: 60px;
 		text-align: center;
 		letter-spacing: 0.2em;
-		// font-size: 1.4rem;
 		padding: 0 10px;
 
 		&::placeholder {
@@ -91,13 +90,10 @@
 		background-color: $primary-color;
 		text-transform: uppercase;
 		padding: 1.2em 2.5em;
-		max-height: 60px;
+		height: 60px;
 		max-width: 130px;
+		margin-top: 20px;
 		@include font($btn-ff, 1.4rem, $secondary-color);
-
-		@media screen and (min-width: 320px) {
-			margin-top: 20px;
-		}
 		@media screen and (min-width: 760px) {
 			margin-top: 0;
 		}
@@ -110,57 +106,10 @@
 		}
     }
 }
-
-.navigation {
-	background-color: $primary-color;
-	position: relative;
-	bottom: 0;
-	height: 80px;
-
-	.container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		height: 100%;
-	}
-
-	&__list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		justify-content: end;
-		display: none;
-
-		@media screen and (min-width: 768px) {
-			display: flex;
-		}
-
-	}
-	&__item {
-		padding: 0 10px;
-		border-left: $border-width solid $primary-color;
-		border-right: $border-width solid $primary-color;
-		@include hover {
-			border-left-color: $secondary-color;
-			border-right-color: $secondary-color;
-		}
-		
-	}
-
-	&__link {
-		@include font($btn-ff, $fz: 1.1rem, $fc: $secondary-color, $lh: 80px);
-		text-transform: uppercase;
-		display: inline-block;
-		height: 80px;
-		@media screen and (min-width: 992px) {
-			font-size: 1.4rem;
-		}
-	}
-}
-
 .logo {
 	text-transform: uppercase;
-	@include font($fz: 2.4rem, $fc: $secondary-color, $fw: 700);
+	@include font($fz: 2.4rem, $fc: $secondary-color, $fw: 700, $lh: 80px);
 	margin: 0;
 	padding: 0;
+	display: inline-block;
 }

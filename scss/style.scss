@@ -3,6 +3,7 @@
 @import 'mixins';
 @import 'socials';
 @import 'header';
+@import 'menu';
 
 * {
   	box-sizing: border-box;
@@ -15,6 +16,7 @@ html {
 body {
 	@include font($body-ff, 1.6rem, $body-color);
 	background-color: $body-bg;
+	overflow-x: hidden;
 }
 h2 {
 	margin: 0;
@@ -27,11 +29,11 @@ a {
 
 .container {
 	margin: 0 auto;
-	max-width: 1170px;
 	padding: 0 5%;
 
 	@media screen and (min-width: 992px) {
 		margin: 0 auto;
+		display: block;
 		max-width: 1170px;
 		padding: 0 25px;
 	}
@@ -72,12 +74,10 @@ a {
 		z-index: 1;
 		display: flex;
 		justify-content: space-between;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
 
-		@media screen and (min-width: 320px) {
-			flex-direction: column;
-			align-items: center;
-			text-align: center;
-		}
 		@media screen and (min-width: 992px) {
 			flex-direction: row;
 			text-align: left;
