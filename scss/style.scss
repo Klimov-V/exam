@@ -49,20 +49,12 @@ a {
 	text-align: center;
 	@include font($btn-ff, 1.4rem, $secondary-color, $ls: .075em);
 	background: linear-gradient(45deg, #496bfe 0%, #496bfe 40%, #5474fd 40%);	
-	// position: relative;
-	// z-index: 2;
-
-	// &:before {
-	// 	content: "";
-	// 	@include posA(0, 50%, $delta_y: 0);
-	// 	width: 275px;
-	// 	height: 60px;
-	// 	z-index: 0;
-	// 	background: linear-gradient(45deg, #496bfe 0%, #496bfe 40%, #5474fd 40%);
-	// }
-	// @include hover {
-	// 	box-shadow: inset 0 0 4px #fff;
-	// }
+	
+	@include hover {
+		transform: scale(1.1);
+		box-shadow: inset 0 0 0 $border-width $secondary-color;
+		// border: $border-width solid $secondary-color;
+	}
 }
 
 
@@ -175,8 +167,18 @@ a {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		border: $border-width solid $body-bg;
+		padding: 20px;
+
+		@include hover {
+			border-color: $primary-color;
+		}
+
 		& + & {
 			margin-top: 50px;
+			@media screen and (min-width: 992px) {
+				margin-top: 0;
+			}
 		}
 		& svg {
 			margin-bottom: 35px;
@@ -221,10 +223,11 @@ a {
 	position: relative;
 	z-index: 1;
 	display: flex;
+	flex-direction: column;
 	background-color: #333333;
 
-	@media screen and (min-width: 320px) {
-		flex-direction: column;
+	@media screen and (min-width: 992px) {
+		flex-direction: row;
 	}
 	&__img {
 		height: 100%;
@@ -232,12 +235,11 @@ a {
 
 		&--wraper {
 			overflow: hidden;
-			min-width: 60%;
 			max-height: 280px;
 
 			@media screen and (min-width: 992px) {
+				min-width: 445px;
 				max-width: 445px;
-				max-height: 280px;
 			}
 		}
 	}
@@ -254,6 +256,10 @@ a {
 		@include font($fz: 2rem, $fc: #fefefe);
 		text-transform: uppercase;
 		margin: 0 0 15px;
+		text-align: center;
+		@media screen and (min-width: 992px) {
+			text-align: left;
+		}
 	}
 
 	&__blockquote {
@@ -263,9 +269,9 @@ a {
 
 		&:before {
 			content: '"';
-			@include font($ff: $btn-ff, $fz: 3.6rem, $fc: $primary-color);
+			@include font($ff: $btn-ff, $fz: 2.6rem, $fc: $primary-color);
 			@media screen and (min-width: 576px) {
-				font-size: 1.6rem;
+				font-size: 3.6rem;
 			}
 		}
 	}
